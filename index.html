@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Jack</title>
+        <link rel="stylesheet" href="blackjack.css">
+        <script src="blackjack.js"></script>
+    </head>
+
+    <body>
+        <div id="main-menu">
+            <div id="menu-overlay">
+                <h1 id="menu-title">♠ BLACK JACK ♠</h1>
+                <button id="start-btn" onclick="startFromMenu()">START</button>
+            </div>
+        </div>
+
+        <div id="game-screen" style="display:none;">
+            <div id="topbar">
+                <span id="win-score">Wins: 0</span>
+                <button id="pause-btn" onclick="openPause()">⏸ Pause</button>
+            </div>
+
+            <h2>Dealer: <span id="dealer-sum"></span></h2>
+            <div id="dealer-cards">
+                <img id="hidden" src="./cards/BACK.png">
+            </div>
+
+            <h2>You: <span id="your-sum"></span></h2>
+            <div id="your-cards"></div>
+
+            <br>
+            <button id="hit">Hit</button>
+            <button id="stay">Stay</button>
+            <br>
+            <button id="play-again-btn" onclick="playAgain()" style="display:none;">🔄 Play Again</button>
+            <p id="results"></p>
+        </div>
+
+        <div id="pause-menu" style="display:none;">
+            <div id="pause-overlay">
+                <img id="pause-image" src="./img/information.png" alt="Pause">
+                <div id="pause-buttons">
+                    <button id="resume-btn" onclick="closePause()">▶ Resume</button>
+                    <button id="restart-btn" onclick="restartGame()">↺ Restart</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
